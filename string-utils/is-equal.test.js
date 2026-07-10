@@ -5,6 +5,14 @@ describe('Тесты isEqual', () => {
     test('должна вернуть true для равных строк (\'hello\', \'hello\')', () => {
         expect(isEqual('hello', 'hello')).toEqual(true);
     });
+
+    test('должна вернуть false если a короче (\'hello\', \'hello!\')', () => {
+        expect(isEqual('hello', 'hello!')).toEqual(false);
+    });
+    
+    test('должна вернуть false если a длиннее, но символы совпадают (\'hello!\', \'hello\')', () => {
+        expect(isEqual('hello!', 'hello')).toEqual(false);
+    });
     
     test('должна вернуть true для равных пустых строк (\'\', \'\')', () => {
         expect(isEqual('', '')).toEqual(true);
@@ -18,7 +26,7 @@ describe('Тесты isEqual', () => {
         expect(isEqual('hi', 'hello')).toEqual(false);
     });
     
-    test(' должна вернуть false для строки с пробелом (\'hi\', \'hi \')', () => {
+    test('должна вернуть false для строки с пробелом (\'hi\', \'hi \')', () => {
         expect(isEqual('hi', 'hi ')).toEqual(false);
     });
     

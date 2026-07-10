@@ -18,6 +18,10 @@ describe('Тесты isLess', () => {
     test('должна вернуть true если a короче (\'hello\', \'hello!\')', () => {
         expect(isLess('hello', 'hello!')).toEqual(true);
     });
+
+    test('должна вернуть false если a длиннее, но символы совпадают (\'hello!\', \'hello\')', () => {
+        expect(isLess('hello!', 'hello')).toEqual(false);
+    });
     
     test('должна вернуть true для заглавной vs строчной (\'A\', \'a\')', () => {
         expect(isLess('A', 'a')).toEqual(true);
@@ -32,5 +36,3 @@ describe('Тесты isLess', () => {
     });
 }
 )
-
-

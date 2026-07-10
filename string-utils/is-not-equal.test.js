@@ -2,19 +2,19 @@ import { describe, test, expect } from 'bun:test';
 import { isNotEqual } from './is-not-equal.js';
 
 describe('Тесты isEqual', () => {
-    test('', () => {
+    test('должна вернуть true для разных строк (\'hello\', \'world\')', () => {
         expect(isNotEqual('hello', 'world')).toEqual(true);
     });
 
-    test('', () => {
+    test('должна вернуть false для одинаковых строк (\'abc\', \'abc\')', () => {
         expect(isNotEqual('abc', 'abc')).toEqual(false);
     });
 
-    test('', () => {
+    test('должна вернуть true для строк разной длины (\'hi\', \'hello\')', () => {
         expect(isNotEqual('hi', 'hello')).toEqual(true);
     });
 
-    test('', () => {
+    test('должна вернуть false для пустых строк (\'\', \'\')', () => {
         expect(isNotEqual('', '')).toEqual(false);
     });
 
