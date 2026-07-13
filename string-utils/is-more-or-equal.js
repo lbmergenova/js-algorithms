@@ -10,6 +10,5 @@ export function isMoreOrEqual(a, b) {
         if (a[i] > b[i]) return true;
         if (a[i] < b[i]) return false;
     }
-    if (lenght_a < lenght_b) return false;
-    return true;
+    return lenght_a >= lenght_b;
 }

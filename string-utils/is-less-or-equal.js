@@ -10,6 +10,5 @@ export function isLessOrEqual(a, b) {
         if (a[i] > b[i]) return false;
         if (a[i] < b[i]) return true;
     }
-    if (lenght_a <= lenght_b) return true;
-    return false;
+    return lenght_a <= lenght_b;
 }

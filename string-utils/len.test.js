@@ -21,14 +21,14 @@ describe('Тесты len', () => {
 
   test('должна выбросить TypeError если аргумент — число (123)', () => {
     expect(() => len(123)).toThrow(TypeError);
-});
+  });
 
   test('должна выбросить TypeError если аргумент — null, undefined', () => {
-  expect(() => len(null)).toThrow('Аргумент должен быть строкой');
+    expect(() => len(null)).toThrow('Аргумент должен быть строкой');
   });
 
     test('должна выбросить TypeError если аргумент — undefined', () => {
-  expect(() => len(undefined)).toThrow(TypeError);
+    expect(() => len(undefined)).toThrow(TypeError);
   });
 });
 
