@@ -1,14 +1,14 @@
 import { len } from "./len";
 
-export function isMore(a, b) {
-    if (typeof a !== 'string') throw new TypeError('Первый аргумент должен быть строкой');
-    if (typeof b !== 'string') throw new TypeError('Второй аргумент должен быть строкой');
-    let lenght_a = len(a);
-    let lenght_b = len(b);
-    let lenght = lenght_a < lenght_b ? lenght_a : lenght_b;
-    for (let i = 0; i < lenght; i++) {
-        if (a[i] > b[i]) return true;
-        if (a[i] < b[i]) return false;
+export function isMore(firstStr, secondStr) {
+    if (typeof firstStr !== 'string') throw new TypeError('Первый аргумент должен быть строкой');
+    if (typeof secondStr !== 'string') throw new TypeError('Второй аргумент должен быть строкой');
+    const firstLength = len(firstStr);
+    const secondLength = len(secondStr);
+    const minLength = firstLength < secondLength ? firstLength : secondLength;
+    for (let i = 0; i < minLength; i++) {
+        if (firstStr[i] > secondStr[i]) return true;
+        if (firstStr[i] < secondStr[i]) return false;
     }
-    return lenght_a > lenght_b;
+    return firstLength > secondLength;
 }

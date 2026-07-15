@@ -1,12 +1,12 @@
 import { len } from "./len";
 
-export function isNotEqual(a, b) {
-    if (typeof a !== 'string') throw new TypeError('Первый аргумент должен быть строкой');
-    if (typeof b !== 'string') throw new TypeError('Второй аргумент должен быть строкой');
-    let lenght = len(a);
-    if ( lenght !== len(b)) return true;
-    for (let i = 0; i < lenght; i++) {
-        if (a[i] !== b[i]) return true;
+export function isNotEqual(firstStr, secondStr) {
+    if (typeof firstStr !== 'string') throw new TypeError('Первый аргумент должен быть строкой');
+    if (typeof secondStr !== 'string') throw new TypeError('Второй аргумент должен быть строкой');
+    const miLength = len(firstStr);
+    if ( miLength !== len(secondStr)) return true;
+    for (let i = 0; i < miLength; i++) {
+        if (firstStr[i] !== secondStr[i]) return true;
     }
     return false;
 }

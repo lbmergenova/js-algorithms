@@ -1,9 +1,9 @@
 export function len(str) {
     if (typeof str !== 'string') throw new TypeError('Аргумент должен быть строкой');
     
-    let lenght = 0;
-    while (str[lenght]) {
-        lenght++;
+    let length = 0;
+    while (str[length]) {
+        length++;
     }
-    return lenght;
+    return length;
 }
