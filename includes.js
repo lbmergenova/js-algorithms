@@ -1,16 +1,19 @@
+import { len } from "./string-utils/len.js";
+
 export function includes(str, search) {
-    if (typeof str !== 'string' || typeof search !== 'string') throw new TypeError("Аргумент должен быть строкой");
-    let lenStr = str.length;
-    let lenSearch = search.length;
-    if (lenSearch > lenStr) return false;
-    if (lenSearch === 0) return true;
-    for (let i = 0; i < lenStr; i++) {
+    if (typeof str !== 'string' || typeof search !== 'string') 
+        throw new TypeError("Аргументы должны быть строкой");
+    const strLen = len(str);
+    const searchLen = len(search);
+    if (searchLen > strLen) return false;
+    if (searchLen === 0) return true;
+    for (let i = 0; i <= strLen - searchLen; i++) {
         if (str[i] === search[0]) {
             let j = 0
-            for (; j < lenSearch; j++) {
+            for (; j < searchLen; j++) {
                 if (str[i+j] !== search[j]) break; 
             }
-            if (j === lenSearch) return true;
+            if (j === searchLen) return true;
         }
     }
     return false; 

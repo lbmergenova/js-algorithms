@@ -1,10 +1,11 @@
+import { len } from "./string-utils/len.js";
+
 export function startsWith(str, search) {
     if (typeof str !== 'string' || typeof search !== 'string') 
         throw new TypeError("Аргументы должны быть строкой");
-    let lenStr = str.length;
-    let lenSearch = search.length;
-    if (lenSearch > lenStr) return false;
-    for (let i = 0; i < lenSearch; i++) {
+    const searchLen = len(search);
+    if (searchLen > len(str)) return false;
+    for (let i = 0; i < searchLen; i++) {
         if (str[i] !== search[i]) return false;
     }
     return true;
