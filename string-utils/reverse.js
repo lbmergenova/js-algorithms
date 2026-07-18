@@ -1,4 +1,4 @@
-import { len } from "./string-utils/len.js";
+import { len } from "./len.js";
 
 export function reverse(str) {
     if (typeof str !== 'string') 

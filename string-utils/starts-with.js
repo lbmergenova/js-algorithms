@@ -1,4 +1,4 @@
-import { len } from "./string-utils/len.js";
+import { len } from "./len.js";
 
 export function startsWith(str, search) {
     if (typeof str !== 'string' || typeof search !== 'string') 

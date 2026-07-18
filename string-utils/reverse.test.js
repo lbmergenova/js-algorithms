@@ -3,27 +3,27 @@ import { reverse } from './reverse.js';
 
 describe('Тесты reverse', () => {
     test('Должна перевернуть строку: reverse(\'hello\') → \'olleh\'', () => {
-        expect(reverse('hello')).toEqual('olleh');
+        expect(reverse('hello')).toBe('olleh');
     });
 
     test('Должна вернуть \'\' для пустой строки', () => {
-        expect(reverse('')).toEqual('');
+        expect(reverse('')).toBe('');
     });
 
     test('Должна вернуть \'a\' для строки из одного символа', () => {
-        expect(reverse('a')).toEqual('a');
+        expect(reverse('a')).toBe('a');
     });
 
     test('Должна вернуть ту же строку для палиндрома: reverse(\'racecar\') → \'racecar\'', () => {
-        expect(reverse('racecar')).toEqual('racecar');
+        expect(reverse('racecar')).toBe('racecar');
     });
 
     test('Должна перевернуть строку с пробелами: reverse(\'a b c\') → \'c b a\'', () => {
-        expect(reverse('a b c')).toEqual('c b a');
+        expect(reverse('a b c')).toBe('c b a');
     });
 
     test('Должна работать с кириллицей: reverse(\'привет\') → \'тевирп\'', () => {
-        expect(reverse('привет')).toEqual('тевирп');
+        expect(reverse('привет')).toBe('тевирп');
     });
     
     test('Должна выбросить TypeError если аргумент не строка (123)', () => {
