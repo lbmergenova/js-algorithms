@@ -153,7 +153,7 @@ This removes the file from the repository but keeps it on your computer. Next ti
 
 # Основные этапы GitHub Flow:
 
-1. Создать новую ветку от `main`: `git branch <name-branch>` потом `git checkout -b <name-branch>` или сразу `git checkout -b <name-branch>`
+1. Создать новую ветку от `main`: `git branch <name-branch>` потом `git checkout -b <name-branch>` или сразу `git checkout -b <name-branch>`, `git switch -c <name-branch>h`
 2. Внести необходимые изменения в код `git add <file>`
 3. Сделать один или несколько коммитов `git commit -m "message"`
 4. Отправить ветку на GitHub с помощью `git push`.
@@ -193,7 +193,7 @@ This removes the file from the repository but keeps it on your computer. Next ti
 | `git branch -vv`                               | Показать локальные ветки, их последние коммиты и связанные удалённые ветки.                                                                           |
 | `git branch -r` | Показать список удалённых веток (remote branches), доступных в репозитории.     |   
 
-git switch -c experiment/test-branch Переключились на новую ветку «experiment/test-branch»
+ Переключились на новую ветку «experiment/test-branch»
 
 git reflog
 
@@ -221,16 +221,6 @@ git reflog
 
 
 ## Pin-сообщение
-
-🔍 PR на ревью: [7 функций сравнения строк]
-📎 Ссылка: https://github.com/твой-username/js-algorithms/pull/1
-👥 Нужны ревью от: @username1, @username2
-📋 2 аппрува для мержа
-
-
-
-
-https://github.com/lbmergenova/js-algorithms/pull/1
 
 🔍 PR на ревью: [7 функций сравнения строк]
 📎 Ссылка: https://github.com/твой-username/js-algorithms/pull/1
