@@ -1,14 +1,6 @@
-import { len } from "./len";
+import { len } from "./len.js";
+import { isMore } from "./is-more.js";
 
 export function isLessOrEqual(firstStr, secondStr) {
-    if (typeof firstStr !== 'string') throw new TypeError('Первый аргумент должен быть строкой');
-    if (typeof secondStr !== 'string') throw new TypeError('Второй аргумент должен быть строкой');
-    const firstLength = len(firstStr);
-    const secondLength = len(secondStr);
-    const minLength = firstLength < secondLength ? firstLength : secondLength;
-    for (let i = 0; i < minLength; i++) {
-        if (firstStr[i] > secondStr[i]) return false;
-        if (firstStr[i] < secondStr[i]) return true;
-    }
-    return firstLength <= secondLength;
+    return !isMore(firstStr, secondStr);
 }
