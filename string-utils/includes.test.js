@@ -51,10 +51,10 @@ describe('Тесты includes', () => {
     });
 
     test('Должна выбросить TypeError если первый аргумент не строка (123, \'hello\')', () => {
-        expect(() => includes(123, 'hello')).toThrow('Аргументы должны быть строкой');
+        expect(() => includes(123, 'hello')).toThrow('Аргументы должны быть строками');
     });
 
     test('Должна выбросить TypeError если второй аргумент не строка (\'hello\', 123)', () => {
-        expect(() => includes('hello', 123)).toThrow('Аргументы должны быть строкой');
+        expect(() => includes('hello', 123)).toThrow('Аргументы должны быть строками');
     });
 });

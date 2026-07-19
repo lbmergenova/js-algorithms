@@ -1,4 +1,3 @@
-// string-utils/len.test.js
 import { describe, test, expect } from 'bun:test';
 import { len } from './len.js';
 

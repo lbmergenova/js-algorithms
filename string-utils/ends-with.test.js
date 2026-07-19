@@ -35,7 +35,7 @@ describe('Тесты endsWith', () => {
     });
 
     test('Должна выбросить TypeError если аргументы не строка', () => {
-        expect(() => endsWith('hello')).toThrow("Аргументы должны быть строкой");
-        expect(() => endsWith(123, 'hello')).toThrow("Аргументы должны быть строкой");
+        expect(() => endsWith('hello')).toThrow("Аргументы должны быть строками");
+        expect(() => endsWith(123, 'hello')).toThrow("Аргументы должны быть строками");
     });
 });

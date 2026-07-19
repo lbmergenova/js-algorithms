@@ -27,7 +27,7 @@ describe('Тесты startsWith', () => {
     });
 
     test('Должна выбросить TypeError если аргументы не строка', () => {
-        expect(() => startsWith(123, 'hello')).toThrow('Аргументы должны быть строкой');
-        expect(() => startsWith('hello')).toThrow('Аргументы должны быть строкой');
+        expect(() => startsWith(123, 'hello')).toThrow('Аргументы должны быть строками');
+        expect(() => startsWith('hello')).toThrow('Аргументы должны быть строками');
     });
 });
