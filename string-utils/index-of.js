@@ -19,16 +19,17 @@ export function indexOf(str, search) {
         throw new TypeError("Аргументы должны быть строками");
     const strLen = len(str);
     const searchLen = len(search);
-    if (searchLen > strLen) return -1;
     if (searchLen === 0) return 0;
+    if (searchLen > strLen) return -1;
     for (let i = 0; i <= strLen - searchLen; i++) {
-        if (str[i] === search[0]) {
-            let j = 0;
-            for (; j < searchLen; j++) {
-                if (str[i + j] !== search[j]) break; 
-            }
-            if (j === searchLen) return i;
+        let isMatch = true;
+        for (let j = 0; j < searchLen; j++) {
+            if (str[i + j] !== search[j]) {
+                isMatch = false;
+                break;
+            } 
         }
+        if (isMatch) return i;
     }
     return -1;
 }

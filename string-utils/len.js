@@ -10,8 +10,8 @@
  *   len('');        // 0
  */
 export function len(str) {
-    if (typeof str !== 'string') throw new TypeError('Аргумент должен быть строкой');
-    
+    if (typeof str !== 'string') 
+        throw new TypeError('Аргумент должен быть строкой');
     let length = 0;
     while (str[length]) {
         length++;
