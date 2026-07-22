@@ -31,7 +31,7 @@ describe('Тесты trim', () => {
         expect(trim('  he llo  ')).toBe('he llo');
     });
 
-    test("Должна удалить только пробелы, не \t и \n: (' \t hello \n ') → '\t hello \n'", () => {
+    test("Должна удалить только пробелы, не \\t и \\n: (' \\t hello \\n ') → '\\t hello \\n'", () => {
         expect(trim(' \t hello \n ')).toBe('\t hello \n');
     });
 
@@ -46,4 +46,5 @@ describe('Тесты trim', () => {
     test("Должна выбросить TypeError если аргумент null", () => {
         expect(() => trim()).toThrow(TypeError);
     });
+
 });

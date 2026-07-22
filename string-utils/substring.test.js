@@ -77,4 +77,5 @@ describe('Тесты substring', () => {
     test("Должна выбросить TypeError если end не число", () => {
         expect(() => substring("hello", 1, null)).toThrow("Второй и третий аргументы должны быть числами");
     });
+    
 });

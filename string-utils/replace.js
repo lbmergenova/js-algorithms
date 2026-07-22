@@ -8,7 +8,7 @@ import { slice } from "./slice.js";
  * @param {string} str - Исходная строка.
  * @param {string} search - Подстрока, которую необходимо заменить.
  * @param {string} replacement - Подстрока, на которую выполняется замена.
- * @returns {string} - Новая строка с замененным первым вхождением подстроки. Если подстрока не найдена, возвращается исходная строка.
+ * @returns {string} - Новая строка с замененным первым вхождением подстроки.
  * @throws {TypeError} - Если хотя бы один из аргументов не является строкой.
  *
  * @example
@@ -22,6 +22,7 @@ export function replace(str, search, replacement) {
         typeof replacement !== 'string') {
             throw new TypeError('Аргументы должны быть строками');
         }
+        
     const indexOfSearch = indexOf(str, search);
     if (indexOfSearch === -1)
         return str;

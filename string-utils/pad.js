@@ -8,8 +8,8 @@ import { repeat } from "./repeat.js";
  * @param {number} length - Длина результирующей строки.
  * @param {string} padStr - Строка, используемая для заполнения.
  * @param {'left'|'right'|'both'} side - Сторона, с которой выполняется заполнение.
- * @returns {string} - Новая строка, дополненная до указанной длины. Если исходная строка уже имеет нужную длину или длиннее, возвращается она же.
- * @throws {TypeError} - Если первый или третий аргумент не является строкой либо второй аргумент не является числом.
+ * @returns {string} - Новая строка, дополненная до указанной длины.
+ * @throws {TypeError} - Если аргументы имеют неверный тип.
  * @throws {RangeError} - Если значение `side` не равно `'left'`, `'right'` или `'both'`.
  *
  * @example
@@ -26,10 +26,13 @@ export function pad(str, length, padStr, side) {
         throw new TypeError('Третий аргумент должен быть строкой');
     if (side !== 'left' && side !== 'right' && side !== 'both')
         throw new RangeError("Аргумент side должен быть 'left', 'right' или 'both'");
+
     const strLen = len(str);
     const padStrLen = len(padStr);
+    
     if (length <= strLen || padStrLen === 0)
         return str;
+
     if (side === 'left' || side === 'right') {
         let padStrToAdd = repeat(padStr, (length - strLen) / padStrLen);
         const padCharsToAdd = (length - strLen) % padStrLen
@@ -40,9 +43,10 @@ export function pad(str, length, padStr, side) {
             return padStrToAdd + str;
         return str + padStrToAdd;
     }
+
     const leftPadLength = (length - strLen) / 2;
     let leftPadStr = repeat(padStr, leftPadLength / padStrLen);
-    const leftPadCharsToAdd = leftPadLength - len(leftPadStr) - 0.5;
+    const leftPadCharsToAdd = leftPadLength - len(leftPadStr) - leftPadLength % 1;
     for (let i = 0; i < leftPadCharsToAdd; i++) {
         leftPadStr += padStr[i]
     }

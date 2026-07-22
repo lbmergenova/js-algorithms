@@ -16,11 +16,14 @@ import { slice } from "./slice.js";
 export function trim(str) {
     let start = 0;
     let end = len(str) - 1;
+
     while (str[start] === ' ') {
         start++;
     }
+
     if (end === start) 
         return '';
+    
     while (str[end] === ' ') {
         end--;
     }

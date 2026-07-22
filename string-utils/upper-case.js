@@ -15,6 +15,7 @@ import { len } from "./len.js";
 export function upperCase(str) {
     if (typeof str !== 'string')
         throw new TypeError('Аргумент должен быть строкой');
+    
     let result = '';
     const caseOffset = 32;
     for (const char of str) {

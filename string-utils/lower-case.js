@@ -4,7 +4,7 @@ import { len } from "./len.js";
  * Преобразует все заглавные буквы в строчные.
  *
  * @param {string} str - Исходная строка.
- * @returns {string} - Новая строка, в которой все прописныезаглавные буквы преобразованы в строчные.
+ * @returns {string} - Новая строка, в которой все прописные заглавные буквы преобразованы в строчные.
  * @throws {TypeError} - Если аргумент не является строкой.
  *
  * @example
@@ -15,6 +15,7 @@ import { len } from "./len.js";
 export function lowerCase(str) {
     if (typeof str !== 'string')
         throw new TypeError('Аргумент должен быть строкой');
+    
     let result = '';
     const caseOffset = 32;
     for (const char of str) {
