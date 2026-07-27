@@ -14,6 +14,8 @@ import { slice } from "./slice.js";
  *   trim('   ');         // ''
  */
 export function trim(str) {
+    if (typeof str !== 'string')
+        throw new TypeError('Аргумент должен быть строкой');
     let start = 0;
     let end = len(str) - 1;
 

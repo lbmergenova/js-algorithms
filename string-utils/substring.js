@@ -24,16 +24,16 @@ export function substring(str, start, end ) {
     if (typeof start !== 'number' || typeof end !== 'number')
         throw new TypeError("Второй и третий аргументы должны быть числами");
     
-    start = Number.isNaN(start) ? 0 : start
-    end = Number.isNaN(end) ? 0 : end
+    if (Number.isNaN(start) || start < 0) start = 0;
+    if (Number.isNaN(end) || end < 0) end = 0;
     if (start > end) {
         const temp = start;
         start = end;
         end = temp;
     }
-    start = start < 0 ? 0 : start;
-    end = end < 0 ? 0 : end;
-    end = (end < strLen) ? end : strLen;
+    if (end > strLen) {
+        end = strLen;
+    }
     let result = '';
     for (let i = start; i < end; i++) {
         result += str[i];

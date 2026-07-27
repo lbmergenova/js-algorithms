@@ -40,11 +40,11 @@ describe('Тесты trim', () => {
     });
 
     test("Должна выбросить TypeError если аргумент не строка: (123) → ошибка", () => {
-        expect(() => trim()).toThrow('');
+        expect(() => trim(123)).toThrow(TypeError);
     });
 
     test("Должна выбросить TypeError если аргумент null", () => {
-        expect(() => trim()).toThrow(TypeError);
+        expect(() => trim(null)).toThrow(TypeError);
     });
 
 });

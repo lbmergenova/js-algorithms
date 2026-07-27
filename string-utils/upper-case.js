@@ -1,4 +1,13 @@
 import { len } from "./len.js";
+import {
+    EN_LOWER_A,
+    EN_LOWER_Z,
+    RU_LOWER_A,
+    RU_LOWER_YA,
+    RU_LOWER_YO,
+    CASE_OFFSET,
+    YO_CASE_OFFSET,
+} from './constants.js';
 
 /**
  * Преобразует строчные буквы в заглавные.
@@ -17,12 +26,14 @@ export function upperCase(str) {
         throw new TypeError('Аргумент должен быть строкой');
     
     let result = '';
-    const caseOffset = 32;
     for (const char of str) {
         let charCode = char.charCodeAt();
-        if ((charCode >= 97 && charCode <= 122) || 
-            (charCode >= 1072 && charCode <= 1103))
-            charCode -= caseOffset;
+        if ((charCode >= EN_LOWER_A && charCode <= EN_LOWER_Z) || 
+            (charCode >= RU_LOWER_A && charCode <= RU_LOWER_YA)) {
+                charCode -= CASE_OFFSET;
+        } else if (charCode === RU_LOWER_YO ) {
+            charCode -= YO_CASE_OFFSET;
+        }
         result += String.fromCodePoint(charCode);
     }
     return result;

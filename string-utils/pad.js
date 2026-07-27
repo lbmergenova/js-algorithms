@@ -1,5 +1,6 @@
 import { len } from "./len.js";
 import { repeat } from "./repeat.js";
+import { slice } from "./slice.js";
 
 /**
  * Дополняет строку до указанной длины символами слева, справа или с обеих сторон.
@@ -30,31 +31,27 @@ export function pad(str, length, padStr, side) {
     const strLen = len(str);
     const padStrLen = len(padStr);
     
-    if (length <= strLen || padStrLen === 0)
+    if (length <= strLen || padStrLen === 0) {
         return str;
-
-    if (side === 'left' || side === 'right') {
-        let padStrToAdd = repeat(padStr, (length - strLen) / padStrLen);
-        const padCharsToAdd = (length - strLen) % padStrLen
-        for (let i = 0; i < padCharsToAdd; i++) {
-            padStrToAdd += padStr[0];
-        }
-        if (side === 'left')
-            return padStrToAdd + str;
-        return str + padStrToAdd;
+    }
+    
+    const paddingLength = length - strLen;
+    let leftPadLength;
+    let rightPadLength;
+    if (side === 'left') {
+        leftPadLength = paddingLength;
+        rightPadLength = 0;
+    } else if (side === 'right') {
+        leftPadLength = 0;
+        rightPadLength = paddingLength;
+    } else {
+        leftPadLength = (paddingLength - paddingLength % 2) / 2;
+        rightPadLength = paddingLength - leftPadLength;
     }
 
-    const leftPadLength = (length - strLen) / 2;
-    let leftPadStr = repeat(padStr, leftPadLength / padStrLen);
-    const leftPadCharsToAdd = leftPadLength - len(leftPadStr) - leftPadLength % 1;
-    for (let i = 0; i < leftPadCharsToAdd; i++) {
-        leftPadStr += padStr[i]
-    }
-    const rightPadLength = length - len(leftPadStr) - strLen;
-    let rightPadStr = repeat(padStr, rightPadLength / padStrLen);
-    const rightPadCharsToAdd = rightPadLength - len(rightPadStr);
-    for (let i = 0; i < rightPadCharsToAdd; i++) {
-        rightPadStr += padStr[i];
-    }
+    const leftPadStr = repeat(padStr, leftPadLength / padStrLen) 
+        + slice(padStr, 0, leftPadLength % padStrLen);
+    const rightPadStr = repeat(padStr, rightPadLength / padStrLen) 
+        + slice(padStr, 0, rightPadLength % padStrLen);
     return leftPadStr + str + rightPadStr;
 }

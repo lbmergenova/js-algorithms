@@ -24,12 +24,20 @@ export function slice(str, start, end) {
     if (typeof start !== 'number' || typeof end !== 'number')
         throw new TypeError("Второй и третий аргументы должны быть числами");
     
-    if (Number.isNaN(start)) start = 0;
-    if (start < 0) start = start + strLen;
-    if (start < 0) start = 0;
-    if (end < 0) end = end + strLen;
-    if (end < 0) end = 0;
-    if (end > strLen) end = strLen;
+    if (Number.isNaN(start)) {
+        start = 0;
+    } else if (start < 0) {
+        start += strLen;
+        if (start < 0) start = 0;
+    }
+
+    if (Number.isNaN(end)) {
+        end = 0;
+    } else if (end < 0) {
+        end += strLen;
+        if (end < 0) end = 0;
+    } else if (end > strLen) end = strLen;
+
     let result = '';
     for (let i = start; i < end; i++) {
         result += str[i];        
