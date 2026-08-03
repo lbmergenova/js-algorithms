@@ -17,8 +17,8 @@ import { len } from "./len.js";
 export function lastIndexOf(arr, item) {
     if (!Array.isArray(arr))
         throw new TypeError("Первый аргумент должен быть массивом");
-    const arrLen = len(arr);
-    for (let i = arrLen; i >= 0; i--) {
+    const lastIndex = len(arr) - 1;
+    for (let i = lastIndex; i >= 0; i--) {
         if (arr[i] === item) 
             return i
     }

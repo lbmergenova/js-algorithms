@@ -23,7 +23,7 @@ export function pop(arr) {
     if (!Array.isArray(arr)) 
         throw new TypeError("Аргумент должен быть массиовом");
     const arrLen = len(arr);
-    const item = arr[arrLen - 1];
+    const lastItem = arr[arrLen - 1];
     delete arr[arrLen - 1];
-    return item;
+    return lastItem;
 }

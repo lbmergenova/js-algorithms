@@ -1,6 +1,5 @@
 import { describe, test, expect } from 'bun:test';
 import { at } from './at.js';
-import { len } from './len.js';
 
 describe('Тесты at', () => {
 
