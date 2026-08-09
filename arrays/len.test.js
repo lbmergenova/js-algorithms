@@ -44,6 +44,17 @@ describe('Тесты len', () => {
         expect(len(arr)).toBe(0);
         expect(arr).toEqual(copy);
     });
+    test("Должна остановиться на первом undefined: len([1, 2, undefined, 4]) → 2", () => {
+        expect(len([1, 2, undefined, 4])).toBe(2);
+    });
+
+    test("Должна вернуть 0 если первый элемент undefined: len([undefined, 1, 2]) → 0", () => {
+        expect(len([undefined, 1, 2])).toBe(0);
+    });
+    
+    test("Должна игнорировать элементы после первого undefined", () => {
+        expect(len([1, undefined, 2, 3, 4])).toBe(1);
+    });
 
     test("Должна выбросить TypeError если передать строку len('hello')", () => {
         expect(() => len('hello')).toThrow(TypeError);

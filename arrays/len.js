@@ -14,8 +14,7 @@ export function len(arr) {
     if (!Array.isArray(arr)) 
         throw new TypeError('Аргумент должен быть массивом')
     let count = 0;
-    for (const item of arr) {
-        if (item !== undefined)
+    while(arr[count] !== undefined) {
             count++;
     }
     return count;
