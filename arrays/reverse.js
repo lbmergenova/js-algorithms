@@ -7,7 +7,7 @@ import { len } from "./len.js";
  * 
  * @param {Array} arr - Исходный массив.
  * @returns {Array} - Изменённый исходный массив.
- * @throws {TypeError} - .
+ * @throws {TypeError} - Если аргумент не является массивом.
  *
  * @example
  *   reverse([1, 2, 3]);    // [3, 2, 1]
