@@ -10,8 +10,6 @@ import { push } from "./push.js"
  * @returns {Array} - Новый массив.
  * @throws {TypeError} - Если первый аргумент не является массивом или второй не является функцией.
  *
- * @example
- *
  */
 export function filter(arr, callback) {
     if (!Array.isArray(arr))

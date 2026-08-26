@@ -9,7 +9,7 @@ describe('Тесты every', () => {
         expect(result).toBe(true);
     });
 
-    test("Не должна изменять исходный масси", () => {
+    test("Не должна изменять исходный массив", () => {
         const arr = [2, 4, 6];
         every(arr, x => x % 2 === 0);
         expect(arr).toEqual([2, 4, 6]);
