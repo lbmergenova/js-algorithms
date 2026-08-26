@@ -1,7 +1,7 @@
 import { describe, test, expect } from 'bun:test';
 import { find } from './find.js';
 
-describe('Тесты findIndex', () => {
+describe('Тесты find', () => {
 
     test("Должна найти первый подходящий элемент: findIndex([1, 2, 3, 4], x => x > 2) → 3", () => {
         const arr = [1, 2, 3, 4];
