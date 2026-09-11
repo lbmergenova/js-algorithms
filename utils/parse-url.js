@@ -3,7 +3,6 @@ import { substring } from "../string-utils/substring.js";
 import { len } from "../string-utils/len.js";
 
 /**
-
 * Разбирает URL на составные части.
 *
 * @param {string} url - URL для разбора.

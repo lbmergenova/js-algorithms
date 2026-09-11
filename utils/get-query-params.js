@@ -3,6 +3,7 @@ import { len } from "../string-utils/len.js";
 
 /**
  * Разбирает query-строку URL в объект.
+ * Значения параметров декодируются с помощью decodeURIComponent().
  *
  * @param {string} url - Полный URL или query-строка.
  * @returns {Object} - Объект с параметрами.
