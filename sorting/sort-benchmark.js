@@ -1,19 +1,17 @@
-import { len } from '../arrays/len.js';
-import { push } from '../arrays/push.js';
-import { indexOf } from '../arrays/index-of.js';
+import { indexOf } from '../arrays/index-of.js'
 import { bubbleSort } from './bubble-sort.js';
 import { insertionSort } from './insertion-sort.js';
 import { selectionSort } from './selection-sort.js';
 import { quickSort } from './quick-sort.js';
 import { binarySearch } from './binary-search.js';
 
-const SIZES = [100, 500, 1000, 2000, 4000, 8000];
+const SIZES = [100, 500, 1000, 2000, 4000, 8000, 10000];
 const RUNS = 5;
 
 function randomArray(size) {
   const arr = [];
   for (let i = 0; i < size; i++) {
-    push(arr, Math.floor(Math.random() * size));
+    arr.push(Math.floor(Math.random() * size));
   }
   return arr;
 }
@@ -37,8 +35,8 @@ const algorithms = [
   { name: 'quickSort', fn: quickSort },
 ];
 
-const sizesCount = len(SIZES);
-const algorithmsCount = len(algorithms);
+const sizesCount = SIZES.length;
+const algorithmsCount = algorithms.length;
 
 for (let s = 0; s < sizesCount; s++) {
   const input = randomArray(SIZES[s]);
@@ -53,7 +51,7 @@ for (let s = 0; s < sizesCount; s++) {
 // Поиск: линейный (indexOf) против бинарного (binarySearch)
 const searchSize = 1000000;
 const sorted = [];
-for (let i = 0; i < searchSize; i++) push(sorted, i); // уже отсортированный массив
+for (let i = 0; i < searchSize; i++) sorted.push(i); // уже отсортированный массив
 const target = searchSize - 1; // ищем последний элемент — худший случай для перебора
 
 const linearSearch = (arr) => indexOf(arr, target);

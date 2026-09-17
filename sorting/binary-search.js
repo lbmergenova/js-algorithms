@@ -1,5 +1,3 @@
-import { len } from "../arrays/len.js"
-
 /** 
  * Выполняет бинарный поиск элемента в отсортированном массиве.  
  * 
@@ -19,11 +17,9 @@ export function binarySearch(arr, target) {
     }
 
     let left = 0
-    let right = len(arr) - 1;
+    let right = arr.length;
     while (left <= right) {
-        const mid = (left + right) % 2 === 0 
-                    ? (left + right) / 2 
-                    : (left + right - 1) / 2;
+        const mid = Math.floor((left + right) / 2) 
         if (arr[mid] === target) {
             return mid
         } else if (arr[mid] < target) {

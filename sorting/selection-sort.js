@@ -1,4 +1,3 @@
-import { len } from "../arrays/len.js"
 /**
  * Сортирует массив чисел по возрастанию методом выбора.
  * Исходный массив не мутирует.
@@ -16,7 +15,7 @@ export function selectionSort(arr) {
     }
 
     const result = [...arr]
-    const n = len(arr);
+    const n = arr.length;
     for (let i = 0; i < n - 1; i++) {
         let minIndex = i;
         for (let j = i + 1; j < n; j++) {

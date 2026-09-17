@@ -1,5 +1,3 @@
-import { len } from "../arrays/len.js"
-
 /**
  * Сортирует массив чисел по возрастанию методом пузырька.
  * Исходный массив не мутирует.
@@ -17,7 +15,7 @@ export function bubbleSort(arr) {
     }
 
     const result = [...arr]
-    const n = len(arr);
+    const n = arr.length;
     for (let i = 0; i < n - 1; i++) {
         for (let j = 0; j < n - 1 - i; j++) {
             if (result[j] > result[j + 1]) {

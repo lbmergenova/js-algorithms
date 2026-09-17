@@ -1,5 +1,3 @@
-import { len } from "../arrays/len.js"
-
 /**
  * Сортирует массив чисел по возрастанию методом вставок.
  * Исходный массив не мутирует.
@@ -17,7 +15,7 @@ export function insertionSort(arr) {
     }
 
     const result = [...arr]
-    const n = len(arr);
+    const n = arr.length;
     for (let i = 1; i < n; i++) {
         const current = result[i];
         let j = i - 1;

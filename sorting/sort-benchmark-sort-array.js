@@ -1,5 +1,3 @@
-import { len } from '../arrays/len.js';
-import { push } from '../arrays/push.js';
 import { indexOf } from '../arrays/index-of.js';
 import { bubbleSort } from './bubble-sort.js';
 import { insertionSort } from './insertion-sort.js';
@@ -7,13 +5,13 @@ import { selectionSort } from './selection-sort.js';
 import { quickSort } from './quick-sort.js';
 import { binarySearch } from './binary-search.js';
 
-const SIZES = [100, 500, 1000, 2000];
+const SIZES = [100, 500, 1000, 2000, 4000, 8000, 10000];
 const RUNS = 5;
 
 function ascendingArray(size) {
   const arr = [];
   for (let i = 0; i < size; i++) {
-    push(arr, i);
+    arr.push(i);
   }
   return arr;
 }
@@ -21,7 +19,7 @@ function ascendingArray(size) {
 function descendingArray(size) {
   const arr = [];
   for (let i = 0; i < size; i++) {
-    push(arr, size - i);
+    arr.push(size - i);
   }
   return arr;
 }
@@ -45,8 +43,8 @@ const algorithms = [
   { name: 'quickSort', fn: quickSort },
 ];
 
-const sizesCount = len(SIZES);
-const algorithmsCount = len(algorithms);
+const sizesCount = SIZES.length;
+const algorithmsCount = algorithms.length;
 console.log("Отсартированный по возрастанию массив")
 for (let s = 0; s < sizesCount; s++) {
   const input = ascendingArray(SIZES[s]);
