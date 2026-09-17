@@ -23,17 +23,18 @@ export function replaceAll(str, search, replacement) {
     
     let result = '';
     const searchLen = len(search);
-    
+    const lenStr = len(str)
+
     if (searchLen === 0) {
         result = replacement;
-        for (let i = 0; i < len(str); i++) {
+        for (let i = 0; i < lenStr; i++) {
             result += str[i];
             result += replacement;
         }
         return result;
     }
 
-    for (let i = 0; i < len(str); i++) {
+    for (let i = 0; i < lenStr; i++) {
         let isMatch = true;
         for (let j = 0; j < searchLen; j++) {
             if (search[j] !== str[i+j]) {
