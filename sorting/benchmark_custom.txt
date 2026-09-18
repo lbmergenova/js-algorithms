@@ -1,0 +1,24 @@
+БЕЗ ИСПОЛЬЗОВАНИЯ ВСТРОЕННЫХ МЕТОДОВ: 
+
+n=100  |  bubbleSort: 0.05мс  |  insertionSort: 0.02мс  |  selectionSort: 0.02мс  |  quickSort: 0.13мс
+n=500  |  bubbleSort: 0.51мс  |  insertionSort: 0.27мс  |  selectionSort: 0.23мс  |  quickSort: 0.61мс
+n=1000  |  bubbleSort: 1.8мс  |  insertionSort: 0.6мс  |  selectionSort: 0.85мс  |  quickSort: 1.4мс
+n=2000  |  bubbleSort: 5.02мс  |  insertionSort: 1.34мс  |  selectionSort: 1.79мс  |  quickSort: 4.61мс
+n=4000  |  bubbleSort: 11.48мс  |  insertionSort: 5.43мс  |  selectionSort: 6.98мс  |  quickSort: 6.6мс
+n=8000  |  bubbleSort: 49.46мс  |  insertionSort: 21.48мс  |  selectionSort: 27.57мс  |  quickSort: 22.84мс
+--- Поиск в массиве из 1000000 элементов (ищем 999999) ---
+indexOf (перебор): 1.05мс
+binarySearch: 0.46мс
+
+Отсартированный по возрастанию массив
+n=100  |  bubbleSort: 0.04мс  |  insertionSort: 0мс  |  selectionSort: 0.02мс  |  quickSort: 0.31мс
+n=500  |  bubbleSort: 0.26мс  |  insertionSort: 0.01мс  |  selectionSort: 0.2мс  |  quickSort: 13.02мс
+n=1000  |  bubbleSort: 0.46мс  |  insertionSort: 0.01мс  |  selectionSort: 0.42мс  |  quickSort: 84.54мс
+n=2000  |  bubbleSort: 1.82мс  |  insertionSort: 0.03мс  |  selectionSort: 1.66мс  |  quickSort: 644.33мс
+
+Отсартированный по убыванию массив
+n=100  |  bubbleSort: 0.07мс  |  insertionSort: 0.03мс  |  selectionSort: 0.02мс  |  quickSort: 0.24мс
+n=500  |  bubbleSort: 0.53мс  |  insertionSort: 0.3мс  |  selectionSort: 0.21мс  |  quickSort: 12.36мс
+n=1000  |  bubbleSort: 0.81мс  |  insertionSort: 1.18мс  |  selectionSort: 0.43мс  |  quickSort: 86.75мс
+n=2000  |  bubbleSort: 3.2мс  |  insertionSort: 2.75мс  |  selectionSort: 1.73мс  |  quickSort: 651.88мс
+

@@ -1,0 +1,31 @@
+С ИСПОЛЬЗОВАНИЕМ ВСТРОЕННЫХ МЕТОДОВ:
+
+n=100  |  bubbleSort: 0.07мс  |  insertionSort: 0.02мс  |  selectionSort: 0.02мс  |  quickSort: 0.04мс
+n=500  |  bubbleSort: 0.43мс  |  insertionSort: 0.14мс  |  selectionSort: 0.23мс  |  quickSort: 0.2мс
+n=1000  |  bubbleSort: 1.66мс  |  insertionSort: 0.55мс  |  selectionSort: 0.46мс  |  quickSort: 0.42мс
+n=2000  |  bubbleSort: 2.92мс  |  insertionSort: 1.37мс  |  selectionSort: 1.73мс  |  quickSort: 0.85мс
+n=4000  |  bubbleSort: 11.04мс  |  insertionSort: 5.5мс  |  selectionSort: 6.75мс  |  quickSort: 1.31мс
+n=8000  |  bubbleSort: 49.12мс  |  insertionSort: 21.7мс  |  selectionSort: 26.67мс  |  quickSort: 1.65мс
+n=10000  |  bubbleSort: 82.05мс  |  insertionSort: 34.29мс  |  selectionSort: 41.56мс  |  quickSort: 2.49мс
+--- Поиск в массиве из 1000000 элементов (ищем 999999) ---
+indexOf (перебор): 0.93мс
+binarySearch: 0мс
+
+Отсартированный по возрастанию массив
+n=100  |  bubbleSort: 0.03мс  |  insertionSort: 0мс  |  selectionSort: 0.02мс  |  quickSort: 0.11мс
+n=500  |  bubbleSort: 0.23мс  |  insertionSort: 0.01мс  |  selectionSort: 0.2мс  |  quickSort: 2.29мс
+n=1000  |  bubbleSort: 0.46мс  |  insertionSort: 0.01мс  |  selectionSort: 0.42мс  |  quickSort: 3.59мс
+n=2000  |  bubbleSort: 1.82мс  |  insertionSort: 0.02мс  |  selectionSort: 1.65мс  |  quickSort: 12.29мс
+n=4000  |  bubbleSort: 7.26мс  |  insertionSort: 0.06мс  |  selectionSort: 6.58мс  |  quickSort: 46.69мс
+n=8000  |  bubbleSort: 28.95мс  |  insertionSort: 0.07мс  |  selectionSort: 26.25мс  |  quickSort: 153.62мс
+n=10000  |  bubbleSort: 45.24мс  |  insertionSort: 0.05мс  |  selectionSort: 41.04мс  |  quickSort: 231.49мс
+
+Отсартированный по убыванию массив
+n=100  |  bubbleSort: 0.1мс  |  insertionSort: 0.05мс  |  selectionSort: 0.03мс  |  quickSort: 0.07мс
+n=500  |  bubbleSort: 0.5мс  |  insertionSort: 0.31мс  |  selectionSort: 0.21мс  |  quickSort: 1.06мс
+n=1000  |  bubbleSort: 1.74мс  |  insertionSort: 1.09мс  |  selectionSort: 0.83мс  |  quickSort: 3.88мс
+n=2000  |  bubbleSort: 3.08мс  |  insertionSort: 2.75мс  |  selectionSort: 1.74мс  |  quickSort: 16.57мс
+n=4000  |  bubbleSort: 12.35мс  |  insertionSort: 10.91мс  |  selectionSort: 6.93мс  |  quickSort: 52.22мс
+n=8000  |  bubbleSort: 49.3мс  |  insertionSort: 43.67мс  |  selectionSort: 27.7мс  |  quickSort: 167.5мс
+n=10000  |  bubbleSort: 76.82мс  |  insertionSort: 68.22мс  |  selectionSort: 43.22мс  |  quickSort: 266.81мс
+
